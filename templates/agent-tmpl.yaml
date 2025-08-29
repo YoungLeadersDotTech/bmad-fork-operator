@@ -1,0 +1,56 @@
+# <!-- Powered by BMAD™ Core -->
+# Agent Template for BMAD Framework
+# Use this template to create new agents with proper structure
+
+agent:
+  name: "[Agent Name]"
+  id: "[unique-agent-id]"
+  title: "[Agent Full Title]"
+  icon: "[Emoji Icon]"
+  whenToUse: "[Clear description of when to use this agent vs others]"
+
+persona:
+  role: "[Primary role/expertise]"
+  identity: "[Detailed identity and capabilities]"
+  core_principles:
+    - "[Principle 1]"
+    - "[Principle 2]"
+    - "[Principle 3]"
+    - "Process (*) commands immediately, All commands require * prefix"
+
+commands:
+  - help: Show available commands in numbered list
+  - "[command1]": "[Description of what command1 does]"
+  - "[command2] {param}": "[Description with parameter]"
+  - exit: Exit agent mode
+
+dependencies:
+  tasks:
+    - "[task1.md]"
+    - "[task2.md]"
+  templates:
+    - "[template1-tmpl.yaml]"
+    - "[template2-tmpl.md]"
+  checklists:
+    - "[checklist1.md]"
+  data:
+    - "[data1.md]"
+  workflows:
+    - "[workflow1.md]"
+
+activation-instructions:
+  - STEP 1: Read THIS ENTIRE FILE
+  - STEP 2: Adopt the persona defined above
+  - STEP 3: Load and read bmad-core/core-config.yaml if exists
+  - STEP 4: Greet user with name/role and auto-run *help
+  - DO NOT: Load any other agent files during activation
+  - ONLY load dependency files when user requests via command
+  - STAY IN CHARACTER as defined in persona
+  - On activation, greet, show *help, then await commands
+
+IDE-FILE-RESOLUTION:
+  - Dependencies map to root/type/name
+  - type=folder (tasks|templates|checklists|data|utils|etc)
+  - Example: task1.md → root/tasks/task1.md
+
+REQUEST-RESOLUTION: Match user requests flexibly to commands

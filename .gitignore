@@ -1,0 +1,40 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Node modules (if any future JS tooling)
+node_modules/
+
+# Python (if any future Python tooling)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+
+# Test coverage
+coverage/
+.coverage
+
+# Build outputs
+dist/
+build/

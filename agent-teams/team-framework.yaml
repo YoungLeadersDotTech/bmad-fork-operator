@@ -1,0 +1,16 @@
+# <!-- Powered by BMAD™ Core -->
+bundle:
+  name: Team Framework
+  icon: 🔧
+  description: Framework customization and agent development team.
+agents:
+  - bmad-orchestrator
+  - bmad-master
+  - bmad-fork-operator
+workflows:
+  - brownfield-fullstack.yaml
+  - brownfield-service.yaml
+  - brownfield-ui.yaml
+  - greenfield-fullstack.yaml
+  - greenfield-service.yaml
+  - greenfield-ui.yaml

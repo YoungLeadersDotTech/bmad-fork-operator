@@ -1,0 +1,66 @@
+# <!-- Powered by BMAD™ Core -->
+# Expansion Pack Configuration Template
+# Place this as config.yaml in your expansion pack root directory
+
+name: "[Expansion Pack Name]"
+version: "1.0.0"
+description: "[Clear description of what this expansion pack provides]"
+slashPrefix: "[UniquePrefix]"
+author: "[Author/Organization Name]"
+license: "MIT"
+
+# Required directory structure:
+# expansion-pack-root/
+#   ├── config.yaml (this file)
+#   ├── agents/
+#   │   └── [agent-name].md
+#   ├── tasks/
+#   │   └── [task-name].md
+#   ├── templates/
+#   │   └── [template-name]-tmpl.yaml
+#   ├── checklists/
+#   │   └── [checklist-name].md
+#   ├── data/
+#   │   └── [data-file].md
+#   ├── workflows/
+#   │   └── [workflow-name].md
+#   └── agent-teams/
+#       └── [team-name].yaml
+
+# Define which agents this pack provides
+agents:
+  - id: "[agent-id-1]"
+    file: "agents/[agent-file-1].md"
+    slashCommand: "[command1]"
+  - id: "[agent-id-2]"
+    file: "agents/[agent-file-2].md"
+    slashCommand: "[command2]"
+
+# Define agent teams (groups of agents that work together)
+teams:
+  - name: "[team-name]"
+    file: "agent-teams/[team-name].yaml"
+    description: "[What this team is for]"
+
+# External dependencies (if any)
+dependencies:
+  core_version: ">=4.0.0"
+  required_packs: []
+  optional_packs: []
+
+# Integration settings
+integration:
+  ide_compatible: true
+  web_compatible: true
+  requires_mcp: false
+  requires_acli: false
+
+# Metadata
+metadata:
+  category: "[development|operations|management|specialized]"
+  tags:
+    - "[tag1]"
+    - "[tag2]"
+  documentation: "README.md"
+  homepage: "[URL if applicable]"
+  repository: "[Git repo URL if applicable]"
