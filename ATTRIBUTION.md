@@ -9,8 +9,8 @@
 ## Based On
 
 **BMAD Method**  
-**Created by:** Yusef Mosiah  
-**Repository:** https://github.com/yusefmosiah/BMAD-Method  
+**Organization:** BMAD Code Organization  
+**Repository:** https://github.com/bmad-code-org/BMAD-METHOD  
 **License:** MIT
 
 ## Purpose
@@ -24,7 +24,7 @@ The BMAD Fork Operator was created to enhance the BMAD Method by providing:
 ## Acknowledgments
 
 Special thanks to:
-- **Yusef Mosiah** for creating the innovative BMAD Method that makes this tool possible
+- **The BMAD Code Organization** for creating the innovative BMAD Method that makes this tool possible
 - **The BMAD Community** for continuous improvements and feedback
 - **Contributors** who help improve and extend this tool
 

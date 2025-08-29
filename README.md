@@ -18,7 +18,7 @@ The BMAD Fork Operator is a powerful agent that transforms BMAD from a methodolo
 ## Prerequisites
 
 1. **BMAD Method Repository**: You need a local clone of BMAD
-   - Original BMAD: `https://github.com/yusefmosiah/BMAD-Method.git`
+   - Original BMAD: `https://github.com/bmad-code-org/BMAD-METHOD.git`
    - Or any BMAD fork you're working with
 
 2. **Directory Structure**: Recommended setup:
@@ -191,7 +191,7 @@ Contributions are welcome! Please:
 
 Created by **John Conneely** | [GitHub](https://github.com/YoungLeadersDotTech)
 
-This tool enhances the [BMAD Method](https://github.com/yusefmosiah/BMAD-Method) created by Yusef Mosiah.
+This tool enhances the [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) by the BMAD Code Organization.
 
 ## License
 
@@ -206,7 +206,7 @@ MIT License - See [LICENSE](LICENSE) file for details
 ## Acknowledgments
 
 Special thanks to:
-- Yusef Mosiah for creating the BMAD Method
+- The BMAD Code Organization for creating the BMAD Method
 - The BMAD community for continuous improvements
 - All contributors and users of this tool
 
