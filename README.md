@@ -1,19 +1,19 @@
-# BMAD Framework Tools
+# BMAD Custom Agent Builder & Framework Tools
 
-> 🔧 **Professional BMAD Framework Customization Expansion Pack**  
+> 🔧 **Create Your Own Custom BMAD Agents with 5-Phase Interactive Builder**  
 > Created by [John Conneely](https://github.com/YoungLeadersDotTech)
 
-## What is BMAD Framework Tools?
+## What is BMAD Custom Agent Builder?
 
-BMAD Framework Tools is a professional expansion pack that enhances BMAD with powerful customization capabilities. The centerpiece is the Fork Operator agent, which provides structured workflows for creating new agents, expansion packs, and framework customizations through systematic elicitation and validation.
+BMAD Custom Agent Builder is a professional expansion pack that empowers you to create your own custom BMAD agents through a structured 5-phase interactive process. The centerpiece is the Fork Operator agent, which guides you through systematic elicitation to build perfect agents tailored to your specific needs.
 
 ### Key Features
 
-- **🤖 Interactive Agent Builder**: 5-phase structured elicitation for creating perfect agents
-- **📦 Expansion Pack Creator**: Build and validate custom expansion packs
-- **✅ Comprehensive Validation**: Ensure agents and packs follow BMAD conventions
-- **📚 Best Practices Built-in**: Includes extensive documentation on prompt engineering and agent design
-- **🔄 Framework Management**: Tools for maintaining and syncing BMAD forks
+- **🤖 5-Phase Agent Creation**: Interactive elicitation process guides you through Discovery → Capabilities → Personality → Integration → Refinement
+- **📦 Expansion Pack Creator**: Build and validate custom expansion packs for domain-specific needs
+- **✅ Comprehensive Validation**: Ensure your agents follow BMAD conventions and best practices
+- **📚 Prompt Engineering Guide**: Advanced techniques and patterns for creating effective agents
+- **🔧 Framework Tools**: Templates, validators, and utilities for extending BMAD
 
 ## Prerequisites
 
@@ -89,18 +89,20 @@ The Fork Operator provides these commands (all require `*` prefix):
 - `*create-task {name}` - Create reusable task
 - `*create-template {type}` - Create new template
 
-### Example: Creating a New Agent
+### Example: Creating Your Custom Agent
 
-1. Activate Fork Operator: `/bmad-fork-operator`
-2. Run: `*build-agent`
-3. Answer the structured questions:
-   - Phase 1: Define role and purpose
-   - Phase 2: Specify capabilities and commands
-   - Phase 3: Set personality and communication style
-   - Phase 4: Configure integration settings
-   - Phase 5: Review and refine
+Want to create a specialized agent for your domain? Here's how easy it is:
 
-The Fork Operator will generate a complete, validated agent file ready for use!
+1. **Activate the Builder**: `/bmadFramework:bmad-fork-operator`
+2. **Start Creation**: `*build-agent`
+3. **Follow the 5-Phase Process**:
+   - **Discovery**: "I need a Security Analyst agent for vulnerability assessments"
+   - **Capabilities**: Define commands like `*scan-code`, `*analyze-dependencies`, `*generate-report`
+   - **Personality**: Set expertise level and communication style
+   - **Integration**: Configure where it fits in your workflow
+   - **Refinement**: Review and perfect your agent
+
+**Result**: A fully functional, validated BMAD agent tailored to your exact needs!
 
 ## What's Included
 
