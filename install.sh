@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# BMAD Fork Operator Installation Script
+# BMAD Framework Tools Expansion Pack Installation Script
 # Created by John Conneely (https://github.com/YoungLeadersDotTech)
 
 set -e
@@ -18,20 +18,21 @@ print_color() {
 }
 
 # Header
-print_color "======================================" "$BLUE"
-print_color "BMAD Fork Operator Installation Script" "$BLUE"
-print_color "======================================" "$BLUE"
+print_color "============================================" "$BLUE"
+print_color "BMAD Framework Tools Expansion Pack Installer" "$BLUE"
+print_color "============================================" "$BLUE"
 echo ""
 
 # Check if BMAD path is provided
 if [ $# -eq 0 ]; then
     print_color "Usage: ./install.sh /path/to/your/BMAD-Method" "$YELLOW"
-    print_color "Example: ./install.sh ~/Projects/BMAD-Method" "$YELLOW"
+    print_color "Example: ./install.sh ~/Projects/BMAD-METHOD-TOAST" "$YELLOW"
     exit 1
 fi
 
 BMAD_PATH="$1"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PACK_NAME="bmad-framework-tools"
 
 # Verify BMAD directory exists
 if [ ! -d "$BMAD_PATH" ]; then
@@ -39,66 +40,49 @@ if [ ! -d "$BMAD_PATH" ]; then
     exit 1
 fi
 
-# Verify it's a BMAD repository
-if [ ! -d "$BMAD_PATH/agents" ] || [ ! -d "$BMAD_PATH/tasks" ]; then
-    print_color "Error: This doesn't appear to be a BMAD repository" "$RED"
-    print_color "Expected to find 'agents' and 'tasks' directories" "$RED"
+# Verify it's a BMAD repository with expansion-packs directory
+if [ ! -d "$BMAD_PATH/expansion-packs" ]; then
+    print_color "Error: No expansion-packs directory found in BMAD repository" "$RED"
+    print_color "Expected to find: $BMAD_PATH/expansion-packs" "$RED"
     exit 1
 fi
 
-print_color "Installing BMAD Fork Operator to: $BMAD_PATH" "$GREEN"
+print_color "Installing BMAD Framework Tools to: $BMAD_PATH/expansion-packs/$PACK_NAME" "$GREEN"
 echo ""
 
-# Create directories if they don't exist
-print_color "Creating necessary directories..." "$YELLOW"
-mkdir -p "$BMAD_PATH/agents"
-mkdir -p "$BMAD_PATH/tasks"
-mkdir -p "$BMAD_PATH/templates"
-mkdir -p "$BMAD_PATH/data"
-mkdir -p "$BMAD_PATH/bmad-core/agent-teams"
+# Create expansion pack directory
+print_color "Creating expansion pack directory..." "$YELLOW"
+mkdir -p "$BMAD_PATH/expansion-packs/$PACK_NAME"
 
-# Copy agent file
-print_color "Installing Fork Operator agent..." "$YELLOW"
-cp "$SCRIPT_DIR/agents/bmad-fork-operator.md" "$BMAD_PATH/agents/"
-print_color "✓ Agent installed" "$GREEN"
+# Copy entire expansion pack structure
+print_color "Installing expansion pack files..." "$YELLOW"
+cp -r "$SCRIPT_DIR"/* "$BMAD_PATH/expansion-packs/$PACK_NAME/"
 
-# Copy task files
-print_color "Installing task files..." "$YELLOW"
-cp "$SCRIPT_DIR/tasks/build-agent-interactive.md" "$BMAD_PATH/tasks/"
-cp "$SCRIPT_DIR/tasks/validate-agent.md" "$BMAD_PATH/tasks/"
-cp "$SCRIPT_DIR/tasks/validate-expansion.md" "$BMAD_PATH/tasks/"
-print_color "✓ Tasks installed" "$GREEN"
+# Remove install script and git files from destination
+rm -f "$BMAD_PATH/expansion-packs/$PACK_NAME/install.sh"
+rm -rf "$BMAD_PATH/expansion-packs/$PACK_NAME/.git"
+rm -f "$BMAD_PATH/expansion-packs/$PACK_NAME/.gitignore"
 
-# Copy template files
-print_color "Installing templates..." "$YELLOW"
-cp "$SCRIPT_DIR/templates/agent-tmpl.yaml" "$BMAD_PATH/templates/"
-cp "$SCRIPT_DIR/templates/expansion-pack-tmpl.yaml" "$BMAD_PATH/templates/"
-print_color "✓ Templates installed" "$GREEN"
-
-# Copy data files
-print_color "Installing data resources..." "$YELLOW"
-cp "$SCRIPT_DIR/data/bmad-conventions.md" "$BMAD_PATH/data/"
-cp "$SCRIPT_DIR/data/agent-best-practices.md" "$BMAD_PATH/data/"
-cp "$SCRIPT_DIR/data/prompt-engineering-patterns.md" "$BMAD_PATH/data/"
-print_color "✓ Data resources installed" "$GREEN"
-
-# Copy team configuration
-print_color "Installing team configuration..." "$YELLOW"
-cp "$SCRIPT_DIR/agent-teams/team-framework.yaml" "$BMAD_PATH/bmad-core/agent-teams/"
-print_color "✓ Team configuration installed" "$GREEN"
+print_color "✓ Expansion pack installed" "$GREEN"
 
 echo ""
-print_color "======================================" "$BLUE"
+print_color "============================================" "$BLUE"
 print_color "Installation Complete!" "$GREEN"
-print_color "======================================" "$BLUE"
+print_color "============================================" "$BLUE"
 echo ""
 
-print_color "The BMAD Fork Operator has been successfully installed!" "$GREEN"
+print_color "The BMAD Framework Tools expansion pack has been installed!" "$GREEN"
 echo ""
-print_color "To use it:" "$YELLOW"
+print_color "The pack includes:" "$YELLOW"
+print_color "  • Fork Operator Agent - Interactive agent builder" "$BLUE"
+print_color "  • Validation tools for agents and expansion packs" "$BLUE"
+print_color "  • Agent creation templates" "$BLUE"
+print_color "  • BMAD conventions and best practices documentation" "$BLUE"
+echo ""
+print_color "To use the Fork Operator:" "$YELLOW"
 print_color "1. Open your AI assistant (Claude, etc.)" "$YELLOW"
 print_color "2. Navigate to your BMAD directory" "$YELLOW"
-print_color "3. Run: /bmad-fork-operator" "$YELLOW"
+print_color "3. Run: /bmadFramework:bmad-fork-operator" "$YELLOW"
 print_color "4. Use *help to see available commands" "$YELLOW"
 echo ""
 print_color "Key commands:" "$BLUE"

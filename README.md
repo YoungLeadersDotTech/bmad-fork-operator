@@ -1,11 +1,11 @@
-# BMAD Fork Operator
+# BMAD Framework Tools
 
-> 🔧 **The Ultimate BMAD Framework Customization Agent**  
+> 🔧 **Professional BMAD Framework Customization Expansion Pack**  
 > Created by [John Conneely](https://github.com/YoungLeadersDotTech)
 
-## What is BMAD Fork Operator?
+## What is BMAD Framework Tools?
 
-The BMAD Fork Operator is a powerful agent that transforms BMAD from a methodology into a fully customizable framework. It provides structured workflows for creating new agents, expansion packs, and framework customizations through systematic elicitation and validation.
+BMAD Framework Tools is a professional expansion pack that enhances BMAD with powerful customization capabilities. The centerpiece is the Fork Operator agent, which provides structured workflows for creating new agents, expansion packs, and framework customizations through systematic elicitation and validation.
 
 ### Key Features
 
@@ -30,30 +30,7 @@ The BMAD Fork Operator is a powerful agent that transforms BMAD from a methodolo
 
 ## Installation
 
-### Method 1: Using BMAD Master (Recommended)
-
-1. **Clone this repository** to get the installation files:
-   ```bash
-   git clone https://github.com/YoungLeadersDotTech/bmad-fork-operator.git
-   cd bmad-fork-operator
-   ```
-
-2. **Navigate to your BMAD fork directory**:
-   ```bash
-   cd ~/Projects/BMAD-Method  # Or wherever your BMAD fork is
-   ```
-
-3. **Activate BMAD Master** in your AI assistant and run:
-   ```
-   /bmad-master
-   ```
-
-4. **When BMAD Master is active**, provide this prompt:
-   ```
-   Please install the BMAD Fork Operator from [path-to-cloned-repo]/installation/fork-operator-prompt.md
-   ```
-
-### Method 2: Manual Installation
+### Method 1: Automatic Installation (Recommended)
 
 1. **Clone this repository**:
    ```bash
@@ -65,23 +42,27 @@ The BMAD Fork Operator is a powerful agent that transforms BMAD from a methodolo
    ```bash
    ./install.sh /path/to/your/BMAD-Method
    ```
-
-3. **Or manually copy files**:
+   Example:
    ```bash
-   # Copy agent file
-   cp agents/bmad-fork-operator.md /path/to/BMAD-Method/agents/
+   ./install.sh ~/Projects/BMAD-METHOD-TOAST
+   ```
 
-   # Copy tasks
-   cp tasks/*.md /path/to/BMAD-Method/tasks/
+### Method 2: Manual Installation
 
-   # Copy templates
-   cp templates/*.yaml /path/to/BMAD-Method/templates/
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/YoungLeadersDotTech/bmad-fork-operator.git
+   ```
 
-   # Copy data files
-   cp data/*.md /path/to/BMAD-Method/data/
+2. **Copy as expansion pack**:
+   ```bash
+   cp -r bmad-fork-operator /path/to/BMAD-Method/expansion-packs/bmad-framework-tools
+   ```
 
-   # Copy team configuration
-   cp agent-teams/team-framework.yaml /path/to/BMAD-Method/bmad-core/agent-teams/
+3. **Remove unnecessary files**:
+   ```bash
+   cd /path/to/BMAD-Method/expansion-packs/bmad-framework-tools
+   rm -rf .git .gitignore install.sh
    ```
 
 ## Usage
@@ -89,8 +70,10 @@ The BMAD Fork Operator is a powerful agent that transforms BMAD from a methodolo
 Once installed, activate the Fork Operator in your AI assistant:
 
 ```
-/bmad-fork-operator
+/bmadFramework:bmad-fork-operator
 ```
+
+Note: The prefix `bmadFramework:` is the expansion pack namespace.
 
 ### Available Commands
 
@@ -145,9 +128,10 @@ The Fork Operator will generate a complete, validated agent file ready for use!
 - **agent-best-practices.md**: Comprehensive agent design guidelines
 - **prompt-engineering-patterns.md**: Advanced prompt engineering techniques
 
-### 👥 Team Configuration
+### ⚙️ Configuration
 
-- **team-framework.yaml**: Agent team for framework customization
+- **config.yaml**: Expansion pack configuration
+- **checklists/**: Validation checklists for agents
 
 ## How It Works
 
@@ -191,7 +175,7 @@ Contributions are welcome! Please:
 
 Created by **John Conneely** | [GitHub](https://github.com/YoungLeadersDotTech)
 
-This tool enhances the [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) by the BMAD Code Organization.
+This expansion pack enhances the [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) by the BMAD Code Organization.
 
 ## License
 
