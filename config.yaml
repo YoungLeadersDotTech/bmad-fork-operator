@@ -1,11 +1,11 @@
 # <!-- Powered by BMAD™ Core -->
 name: bmad-framework-tools
 version: 1.0.0
-short-title: Framework Tools Pack
+short-title: Custom Agent Builder & Framework Tools
 description: >-
-  This expansion pack provides powerful tools for customizing and extending the BMAD framework.
-  It includes the Fork Operator agent for creating new agents through structured elicitation,
-  validation tools for agents and expansion packs, and comprehensive documentation on BMAD
-  conventions and best practices.
+  Create your own custom BMAD agents with the Fork Operator's 5-phase interactive builder.
+  This expansion pack provides professional tools for extending BMAD: structured agent creation
+  with elicitation workflows, validation tools for agents and expansion packs, templates for
+  new agents, and comprehensive documentation on BMAD conventions and prompt engineering best practices.
 author: John Conneely (YoungLeadersDotTech)
 slashPrefix: bmadFramework
